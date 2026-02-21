@@ -56,5 +56,13 @@ services:
       kafka:
         condition: service_healthy
 
+  frontend:
+    build: ./frontend
+    container_name: banking-frontend
+    ports:
+      - "8081:80"
+    depends_on:
+      - backend
+
 volumes:
   postgres_data:

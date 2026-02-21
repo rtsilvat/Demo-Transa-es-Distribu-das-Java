@@ -30,30 +30,25 @@ docker-compose up -d
 ```
 
 - Backend: http://localhost:8080
-- Frontend: execute separadamente (veja abaixo)
+- Frontend: http://localhost:8081
 - Postgres: localhost:8432 (porta 8432 para evitar conflito)
 - Kafka: localhost:9092
 
-### Opção 2: Desenvolvimento local
+### Opção 2: Desenvolvimento local (frontend com hot reload)
 
-1. **Subir infraestrutura:**
+1. **Subir infraestrutura e backend:**
 ```bash
-docker-compose up -d postgres kafka
+docker-compose up -d postgres kafka backend
 ```
 
-2. **Backend:**
-```bash
-./mvnw spring-boot:run
-```
-
-3. **Frontend:**
+2. **Frontend em modo dev:**
 ```bash
 cd frontend
 npm install
 npm run dev
 ```
 
-O frontend roda em http://localhost:5173 com proxy para a API.
+O frontend roda em http://localhost:5173 com proxy para a API em :8080.
 
 ## API
 
