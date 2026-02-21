@@ -1,0 +1,13 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+*.jar
+*.war
+*.ear
+*.class
+.m2/
+node_modules/
+frontend/dist/
+.DS_Store
+*.log
+.env
+.env.local
